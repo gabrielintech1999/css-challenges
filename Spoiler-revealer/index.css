@@ -1,0 +1,63 @@
+/* Custom properties */
+:root {
+  --bg-gray: rgba(128, 128, 128, 0.158);
+  --bg-white: white;
+  --bg-black: black;
+  --text-color: rgba(0, 0, 0, 0.747);
+  --gap: 25px;
+}
+
+/* Basic Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 100%;
+  background-color: var(--bg-white);
+  color: var(--text-color);
+}
+
+/* Layout */
+
+.container {
+  max-width: 360px;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+/* Post component */
+
+.post {
+  border-radius: 0.5rem;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-gray);
+}
+
+.spoiler {
+  cursor: pointer;
+  background: var(--bg-black);
+  transition: background 250ms linear;
+}
+
+.spoiler:hover {
+  background-color: initial;
+}
