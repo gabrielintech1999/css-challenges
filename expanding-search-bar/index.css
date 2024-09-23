@@ -17,35 +17,52 @@ body {
 
 }
 
-::placeholder {
-    font:inherit
+/* utility class */
+
+/* for accessibility purpose */
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
 }
 
-:focus {
-    outline: 1px solid var(--search-focus-border);
-}
 
 /* Layout */
+
 .container {
-    padding: 12px;
     height: 100vh;
-    max-width: 1000px;
     margin-inline: auto;
-    /* border: 2px solid red; */
-}
-
-/* Search bar component */
-
-input[type="search"] {
-    border: 1px solid var(--search-border);
+    max-width: 1250px;
     padding: 12px;
-    border-radius: .5rem;
-    transition: width 1s linear; 
 }
 
-[type="search"]:focus {
-    /* transform-origin: left;
-    transform: scale(3, 1); */
+/* Component input */
+
+input {
+    width: 50%;
+    line-height: 3;
+    padding-inline: 10px;
+    border-radius: .2rem;
+    border: 1px solid var(--search-border);
+    transition: all 250ms ease-in-out;
+    /* font: inherit; */
+}
+
+input:placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
     width: 100%;
-}   
+    border: none;
+    outline: 2px solid var(--search-focus-border);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
 

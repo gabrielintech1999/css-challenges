@@ -1,0 +1,118 @@
+/* Colors 
+body background: #131417
+tile background: #1e1f26 
+username: #b7bbc8
+card stats background: #131417
+*/
+
+:root {
+  --font-main: sans-serif;
+  --bg-main: #131417;
+  --bg-card: #1e1f26;
+  --bg-stats: #131417;
+  --username: #b7bbc8;
+  --margin-top: 15px;
+}
+
+/* Global styles */
+
+html,
+body {
+  font-family: var(--font-main);
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--bg-main);
+  padding-inline: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* utilities */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Card components */
+
+.card {
+  color: #fff;
+  background-color: var(--bg-card);
+  /* border: 2px solid red; */
+  max-width: 360px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 12px;
+}
+
+/* card body */
+
+.card-body {
+  --gap: 15px;
+  --padding: 0.2rem;
+  margin-top: var(--margin-top);
+  padding: var(--padding);
+  gap: var(--gap);
+  transition: display 1s linear 2s;
+  margin-bottom: 15px;
+}
+
+.card-body p {
+  color: var(--username);
+}
+
+.card-body .card-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-details {
+  flex-direction: column;
+  align-items: start;
+}
+
+/* card stats */
+.card-stats {
+  margin-top: var(--margin-top);
+  gap: 15px;
+  justify-content: start;
+  transform: scale(1, 1);
+  display: none;
+
+  /* border: 1px solid red; */
+}
+
+.card-stats * {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--bg-stats);
+}
+
+/* card state */
+
+.card:hover .card-stats {
+  display: flex;
+}
