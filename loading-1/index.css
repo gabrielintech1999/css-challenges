@@ -1,0 +1,58 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Global styles */
+
+:root {
+  --color-light: lightgray;
+  --color-dark: darkgray;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  /* background-color: #000; */
+}
+
+/* loading components */
+
+.loading {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.loading .circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  transform: scale(1, 1);
+  animation: loader 2s ease-in-out 1s alternate infinite;
+
+
+  /* border: 1px solid red; */
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+    background-color: var(--color-dark);
+  }
+
+  100% {
+    transform: scale(1.1);
+    background-color: var(--color-light);
+  }
+}

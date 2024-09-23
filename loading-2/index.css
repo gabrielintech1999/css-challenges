@@ -1,0 +1,62 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Global styles */
+
+body {
+  display: grid;
+  place-content: center;
+  /* background-color: #000; */
+}
+
+/* loading components */
+
+.loading {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.loading div:nth-of-type(1) {
+  background-color: red;
+}
+
+.loading div:nth-of-type(2) {
+  background-color: blue;
+}
+
+.loading div:nth-of-type(3) {
+  background-color: yellow;
+}
+
+.loading .square {
+  width: 45px;
+  height: 45px;
+  transform: rotate(-45deg);
+  transition: all 5s;
+  background-color: var(--color-dark);
+  animation: loader 2s ease-in-out 1s infinite;
+
+  /* border: 1px solid red; */
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(-45deg);
+  }
+
+  to {
+    transform: rotate(45deg);
+  }
+}
