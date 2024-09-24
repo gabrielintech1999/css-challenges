@@ -1,0 +1,174 @@
+:root {
+  --font-main: "Noto Sans", sans-serif;
+  --main-bg: #000;
+  --profile-bg: #0d1117;
+  --profile-color: #c9d1d9;
+  --profile-img-border: #2e343b;
+  --username-font-color: #8b949e;
+  --username-font-weight: 400;
+  --btn-bg: #21262d;
+  --btn-color: #c9d1d9;
+  --btn-bg-hover: #30363d;
+  --btn-border: #373b43;
+  --btn-border-hover: #8c949e;
+}
+
+body {
+    font-family: var(--font-main);
+    background: #000;
+    color: #c9d1d9;
+}
+
+/* Reset CSS */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Global css */
+
+
+
+/* profile component */
+
+.profile-container {
+  margin-inline: 15px;
+  width: 80%;
+  min-height: 250px;
+  max-width: 400px;
+  padding: 25px;
+  background-color: var(--profile-bg);
+  margin-inline: auto;
+  border-radius: 0.2rem;
+}
+
+.profile-details {
+  display: grid;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.profile-container img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 2px solid var(--profile-img-border);
+}
+
+.profile-container button {
+  /* width: 100%; */
+  padding-block: 8px;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.profile-container button:hover {
+    /* width: 100%; */
+    background-color: var(--btn-bg-hover);
+    border: 1px solid var(--btn-border-hover);
+  }
+
+.profile-container h2 {
+  color: var(--username-font-color);
+  font-weight: var(--username-font-weight);
+}
+
+.profile-container p {
+  font-size: 0.9rem;
+  color: var(--profile-color);
+}

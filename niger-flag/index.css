@@ -24,8 +24,9 @@ body {
 
 /* colors */
 :root {
-  --white: #FFFFFF;
-  --red: #BC022C;
+  --orange: #e15307;
+  --white: #ffffff;
+  --green: #10af2a;
   --flag-height: 200px;
 }
 
@@ -37,17 +38,35 @@ body {
   background-color: rgba(128, 128, 128, 0.39);
 }
 
-.flag-japan{
-  height: 250px;
-  width: 250px; 
+.flag-niger {
+  height: 150px;
+  width: calc(var(--flag-height) * 7/6);
+  background-color: var(--blue);
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.stripe {
   display: grid;
   place-content: center;
-  background-color: var(--white);
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: var(--red);
+  background-color: var(--orange);
+}
+
+.flag-niger div:nth-of-type(1) {
+  background-color: var(--orange);
+}
+
+.flag-niger div:nth-of-type(2) {
+  background-color: var(--white);
+}
+
+.flag-niger div:nth-of-type(3) {
+  background-color: var(--green);
 }
