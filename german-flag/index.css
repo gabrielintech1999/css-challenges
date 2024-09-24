@@ -1,0 +1,56 @@
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* colors */
+:root {
+  --black: #000000;
+  --red: #de0002;
+  --yellow: #ffce00;
+  --flag-height: 150px;
+}
+
+/* global styles */
+body {
+  background-color: #00000036;
+  display: grid;
+  place-content: center;
+}
+
+.flag-france {
+  /* border: 2px solid red; */
+  margin-inline: auto;
+  width: calc(var(--flag-height) * 3 / 2); /* Aspect ratio  proporçao  3:2 */
+  height: 150px;
+  display: grid;
+}
+
+.flag-france div:nth-of-type(1) {
+  background-color: var(--black);
+}
+
+.flag-france div:nth-of-type(2) {
+  background-color: var(--red);
+}
+
+.flag-france div:nth-of-type(3) {
+  background-color: var(--yellow);
+}

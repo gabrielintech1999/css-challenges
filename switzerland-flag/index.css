@@ -1,0 +1,74 @@
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* colors */
+:root {
+  --white: #fff;
+  --red: #ff0002;
+  --flag-hw: 200px;
+}
+
+/* Global styles */
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+.flag-swiss {
+  height: var(--flag-hw);
+  width: calc(var(--flag-hw) * 1);
+  border: 1px solid red;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cross {
+  background-color: var(--white);
+}
+
+.cross {
+  height: calc(var(--flag-hw) * 3/16);
+  width: calc(var(--flag-hw) * 5/8);
+  background: var(--white);
+}
+
+.cross-horizontal {
+  transform: rotate(90deg);
+  position: absolute;
+}
+/* .cross1 {
+  height: calc(var(--flag-hw) * 3/16);
+  width: calc(var(--flag-hw) * 5/8);
+  background: var(--white);
+}
+
+.cross2 {
+  height: calc(var(--flag-hw) * 5/8);
+  width: calc(var(--flag-hw) * 3/16);
+  background: var(--white);
+  position: absolute;
+} */

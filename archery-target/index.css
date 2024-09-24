@@ -1,12 +1,11 @@
 /* Custom properties */
 
 :root {
-    --black: #282828; 
-    --blue: #2892f9; 
-    --red: #fb2f27;
-    --yellow: #fdfe29;
+  --black: #282828;
+  --blue: #2892f9;
+  --red: #fb2f27;
+  --yellow: #fdfe29;
 }
-
 
 /* reset */
 
@@ -24,116 +23,56 @@ html {
   text-size-adjust: none;
 }
 
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
   line-height: 1.5;
 }
 
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-
-
 /* global styles */
 
 body {
-    display: grid;
-    place-content: center;
+  display: grid;
+  place-content: center;
 }
-
 
 /* archery target components */
 
-
-.ring-1, .ring-2, .ring-3 {
-    display: grid;
-    place-content: center;
-    border: 1px solid red;
-    background-color: var(--yellow);
-    width: 50px;
-    height: 50px;
+.rings, .ring {
+  display: grid;
+  place-content: center;
+  border-radius: 50%; 
 }
 
-.ring {
-    display: grid;
-    place-content: center;
-    width: 400px;
-    height: 400px;
-    background-color: var(--black);
+.rings {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+
 }
 
 .ring-1 {
-    width: 300px;
-    height: 300px;
-    background-color: var(--blue);
+  width: 250px;
+  height: 250px;
+  background-color: red;
 }
 
 .ring-2 {
-    width: 250px;
-    height: 250px;
-    padding: 15px;
-    background-color: var(--blue);
+  width: 200px;
+  height: 200px;
+  background-color: blue;
 }
 
-.ring-3 {
-    width: 75px;
-    height: 75px;
-    padding: 15px;
-    background-color: red;
+.ring-3{
+  width: 150px;
+  height: 150px;
+  background-color: green;
 }
 
 
-
+.bullseye {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
 
