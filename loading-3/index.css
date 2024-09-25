@@ -1,0 +1,44 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Global styles */
+
+:root {
+  --spinner: #f3f3f3;
+  --spinner-active: purple;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: rgba(128, 128, 128, 0.377);
+  /* background-color: #000; */
+}
+
+/* loading components */
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 12px solid var(--spinner);
+  border-top: 12px solid var(--spinner-active);
+  transform: rotate(0deg);
+  animation: loader 2s linear infinite;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}

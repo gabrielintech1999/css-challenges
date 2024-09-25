@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Adjustable Progress bar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="prog-status stage-2"></div>
+      </div>
+    </div>
+
+    <script>
+      const progStatus = document.querySelector(".prog-status");
+
+      console.log(progStatus);
+      
+
+      let count  = 0
+
+      setInterval(() => {
+        progStatus.classList.add(`stage-${count + 1}`)
+
+        console.log(count);
+        
+      }, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+:root {
+  --stage-1: 25%;
+  --stage-2: 50%;
+  --stage-3: 75%;
+  --stage-4: 100%;
+  --progbar-bg: lightgray;
+  --stage-1-bg: red;
+  --stage-2-bg: orangered;
+  --stage-3-bg: greenyellow;
+  --stage-4-bg: green;
+}
+/* reset css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Progress bar components */
+.progress-bar {
+  width: 250px;
+  height: 35px;
+  border-radius: 2rem;
+
+  /* display: grid;
+    place-content: center; */
+  background-color: var(--progbar-bg);
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.prog-status {
+  width: 0%;
+  height: 35px;
+  border-radius: 2rem;
+  transition: width 1s;
+  /* animation: progress 2s infinite; */
+}
+
+/* state */
+
+
+/*
+.prog-status.stage-1 {
+  width: 25%;
+  background: var(--stage-1-bg);
+}
+
+.prog-status.stage-2 {
+  width: 50%;
+  background: var(--stage-2-bg);
+}
+.prog-status.stage-3 {
+  width: 75%;
+  background: var(--stage-3-bg);
+}
+
+.prog-status.stage-4 {
+  width: 100%;
+  background: var(--stage-4-bg);
+}*/
+
+@keyframes progress {
+  25% {
+    width: 25%;
+    background: var(--stage-1-bg);
+  }
+
+  50% {
+    width: 50%;
+    background: var(--stage-2-bg);
+  }
+  75% {
+    width: 75%;
+    background: var(--stage-3-bg);
+  }
+
+  100% {
+    width: 100%;
+    background: var(--stage-4-bg);
+  }
+}
