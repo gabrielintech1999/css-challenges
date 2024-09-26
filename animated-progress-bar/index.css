@@ -1,0 +1,76 @@
+:root {
+  --progressbar-bg: lightgrey;
+  --start: red;
+  --middle: blue;
+  --finish: green;
+}
+/* reset css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Progress bar components */
+.progress-bar {
+  width: 250px;
+  height: 35px;
+  border-radius: 2rem;
+  background-color: var(--progressbar-bg);
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.prog-status {
+  width: 10%;
+  background: var(--start);
+  height: 35px;
+  border-radius: 2rem;
+  transition: width 1s;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+  50% {
+    width: 50%;
+    background: var(--middle);
+  }
+  75% {
+    width: 100%;
+    background: var(--finish);
+  }
+
+  100% {
+    width: 100%;
+    background: var(--finish);
+  }
+}

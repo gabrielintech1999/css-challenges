@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* global styles */
+
+body {
+  background-color: #0d1116;
+  height: 100vh;
+}
+/* graph component */
+
+:root {
+  --graph-bg: #000;
+  --default-square-bg: #161b22;
+  --level3: darkblue;
+  --level5: blue;
+  --level10: lightskyblue;
+}
+
+.graph {
+    padding: 12px;
+  display: flex;
+  gap: 1px;
+  /* max-width: 320px; */
+  max-width: fit-content;
+  margin: 45px auto;
+  /* overflow: scroll; */
+  background-color: var(--graph-bg);
+}
+
+.graph::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  background-color: var(--default-square-bg);
+  width: 9px;
+  height: 9px;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+/* [0, 0, 0, 3, 5, 10] state */
+
+li[data-value="10"] {
+  background-color: var(--level10);
+}
+
+li[data-value="5"] {
+  background-color: var(--level5);
+}
+
+li[data-value="3"] {
+  background-color: var(--level3);
+}
